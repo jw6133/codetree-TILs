@@ -2,12 +2,6 @@ def lining(copy,a):
     for j in range(a):
         if(j+1==a):
             break
-        elif copy[j][0]>copy[j+1][0]:
-            temp=copy[j]
-            copy[j]=copy[j+1]
-            copy[j+1]=temp
-            if(j+1!=1):
-                lining(copy,a)
         elif copy[j][0]==copy[j+1][0]:
             if(copy[j][1]<copy[j+1][1]):
                 tempe=copy[j]
@@ -26,9 +20,12 @@ for i in range(a):
     base.append(ar)
 
 copy=base
+
 for i in copy:
     i.append(cnt)
     cnt=cnt+1
+    
+copy.sort()
 
 lining(copy,a)
 
