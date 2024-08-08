@@ -6,13 +6,15 @@ def lining(copy,a):
             temp=copy[j]
             copy[j]=copy[j+1]
             copy[j+1]=temp
-            lining(copy,a)
+            if(j+1!=1):
+                lining(copy,a)
         elif copy[j][0]==copy[j+1][0]:
             if(copy[j][1]<copy[j+1][1]):
                 tempe=copy[j]
                 copy[j]=copy[j+1]
                 copy[j+1]=tempe
-                lining(copy,a)
+                if(j+1!=1):
+                    lining(copy,a)
 
 a=int(input())
 base=[]
