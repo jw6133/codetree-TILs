@@ -12,6 +12,7 @@ for i in range(ar[0],ar[2]+1):
     else:
         cnt=cnt+31
 
+cnt=cnt-ar[1]
 
 if(ar[2]==2):
     cnt=cnt-(29-ar[3])
@@ -20,4 +21,4 @@ elif(ar[2] in thirty):
 else:
     cnt=cnt-(31-ar[3])
 
-print(cnt//7)
+print(cnt//7+1)
